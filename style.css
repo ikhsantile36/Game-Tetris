@@ -1,0 +1,116 @@
+/* Ensure the body takes up the full height */
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+  }
+
+  header {
+    color: white;                 
+    padding: 5px;                
+    text-align: center;         
+  }
+
+  h1, p {
+    margin: 0;                   
+  }
+
+  /* Styling for the canvas */
+  canvas {
+    border: 1px solid white;
+    background-color: black;
+    width: 21%;
+  }
+
+
+  /* Styling for the arrow buttons */
+  .arrow-button {
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;                /* Menggunakan Flexbox */
+    justify-content: center;      /* Menata secara horizontal */
+    align-items: center; 
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin: 5px;
+    transition: background-color 0.3s;
+  }
+
+  /* Hole in the center of the button
+  .arrow-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  } */
+
+  /* Hover effect */
+  .arrow-button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* Positioning for the buttons container */
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Left and right buttons positioned next to each other */
+  .horizontal-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Mobile view */
+  @media (max-width: 480px) {
+    /* Resize canvas for mobile */
+    canvas {
+      width: 65%;
+      height: 70%;
+    }
+
+    h1, p {
+      margin: 0;
+      font-size: 50px;                   
+    }
+
+    /* Stack the buttons vertically on mobile */
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Adjust button size for mobile */
+    .arrow-button {
+      width: 70px;
+      height: 70px;
+      font-size: 24px;
+    }
+
+    /* Center the buttons for mobile */
+    .horizontal-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 20px;
+    }
+  }
